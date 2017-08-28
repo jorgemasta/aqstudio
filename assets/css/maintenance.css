@@ -1,0 +1,51 @@
+body {
+    overflow: hidden;
+}
+
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-title h1 {	
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	color: #d0ad55;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+    margin: 0;
+    padding-bottom: 32px;
+}
+.large-header {
+    position: relative;
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+a {
+    color: #96814b;
+}
+a:hover, a:active, a:focus {
+    color: #5a4e2f;
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+    .main-title h1 {
+        font-size: 70px;
+    }
+}
