@@ -21,7 +21,7 @@ body {
 	color: #d0ad55;
 	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
-	padding: 0;
+	padding: 0 15px;
     margin: 0;
     padding-bottom: 32px;
 }
