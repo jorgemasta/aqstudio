@@ -1,0 +1,46 @@
+/* ----------------------------------------------------
+	13)	SLIDER STYLES
+------------------------------------------------------- */
+
+.slider-text{
+	font-family: 'Raleway', sans-serif;
+	color: #282836;
+	font-size: 52px;
+	font-weight: 300;
+	line-height: 56px;
+	letter-spacing: 1px;
+	text-transform: none;
+}
+.tp-loader.spinner0{
+	display: none;
+}
+
+.tparrows {
+    display: none;
+}
+
+/*owl carousel*/
+.owl-theme .owl-controls .owl-page span {
+	background: #999;
+}
+.owl-theme .owl-controls {
+	margin-top: 40px;
+	text-align: center;
+}
+#owl-demo a:hover{
+	opacity: 0.4;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.owl-theme .owl-controls .owl-page span {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#owl-office .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

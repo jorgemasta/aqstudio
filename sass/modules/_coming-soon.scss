@@ -1,0 +1,50 @@
+/* ----------------------------------------------------
+	COMING SOON TIMER STYLES
+------------------------------------------------------- */
+#counter {
+	color: #d0ad55;
+	overflow: hidden;
+}
+
+.counter-container {
+	display: table;
+	margin: 0 auto;
+}
+#counter .counter-box {
+	display: block;
+	width: 190px;
+	text-align: center;
+	overflow: hidden;
+	padding: 10px 35px;
+	float: left;
+	margin: 25px 0;
+	position: relative;
+}
+#counter .last {
+	border-right: 0px solid #fff;
+}
+#counter .number {
+	font-size: 80px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 1;
+}
+#counter span {
+	display: block;
+	font-size: 21px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+.c-soon h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 36px;
+	line-height: 31px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #d0ad55;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+	margin: 0;	
+}
