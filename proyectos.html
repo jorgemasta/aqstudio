@@ -35,7 +35,7 @@
         <!-- Css Theme -->           
         <link rel="stylesheet" href="assets/css/style.css">
     </head>    
-    <body>        
+    <body class="proyectos">        
 
         <!--Start Preloader-->
         <div id="preloader">
@@ -61,12 +61,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!-- Logo -->        
-                    <a class="navbar-brand" href="index-m.html">AQ STUDIO</a>                     
+                    <a class="navbar-brand" href="index.html">AQ STUDIO</a>                     
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
                         <li><a href="estudio.html">Estudio</a></li>                                                                            
                         <li class="active"><a href="proyectos.html">Proyectos</a></li>                    
                         <li><a href="servicios.html">Servicios</a></li>
@@ -79,10 +78,7 @@
         <!-- Navbar -->
 
         <!-- Header Background Parallax Image -->   
-        <div id="projects_bg">         
-            <div class="head-title"> 
-                <h2>Nuestros proyectos</h2>                        
-            </div>
+        <div id="header_bg">         
         </div>
         <!-- End Header Background Parallax Image -->              
 
@@ -97,36 +93,40 @@
                     <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
                         Todos <div class="cbp-filter-counter"></div>
                     </div>
-                    <div data-filter=".apartments" class="cbp-filter-item">
+                    <div data-filter=".obra-nueva" class="cbp-filter-item">
                         Obra nueva <div class="cbp-filter-counter"></div>
                     </div>
-                    <div data-filter=".houses" class="cbp-filter-item">
+                    <div data-filter=".reformas" class="cbp-filter-item">
                         Reformas <div class="cbp-filter-counter"></div>
                     </div>
-                    <div data-filter=".architecture" class="cbp-filter-item">
-                        Rehabilitación <div class="cbp-filter-counter"></div>
-                    </div>
-                    <div data-filter=".architecture" class="cbp-filter-item">
+                    <div data-filter=".otros" class="cbp-filter-item">
                         Otros <div class="cbp-filter-counter"></div>
                     </div>
-                    <div data-filter=".architecture" class="cbp-filter-item">
-                        Bancos <div class="cbp-filter-counter"></div>
+                    <div class="cbp-filter-item">
+                         <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div class="cbp-filter-item">
+                        Rehabilitación <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div class="cbp-filter-item">
+                        Entidades bancarias <div class="cbp-filter-counter"></div>
                     </div>
                 </div>
 
-                <div id="grid-container" class="cbp-l-grid-masonry">
+                <div id="grid-container" class="cbp-l-grid-projects">
                     <ul>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item apartments cbp-l-grid-masonry-height2">
-                            <a class="cbp-caption cbp-lightbox" data-title="YouTube Embed" href="https://www.youtube.com/watch?v=53c6o_cNPEo&feature=youtu.be">
+                        <li class="cbp-item obra-nueva cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/unifamiliar-taliarte.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/1.jpg" alt="">
+                                    <img src="assets/img/proyectos/unifamiliar-taliarte/1.JPG" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">YouTube Embed</div>                                                
+                                            <div class="cbp-l-caption-title">Vivienda Unifamiliar en Taliarte</div>
+                                            <div class="cbp-l-caption-desc">Telde, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,16 +134,34 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item houses cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Villa in Cannes<br>2014/04" href="assets/img/projects/2big.jpg">
+                        <li class="cbp-item obra-nueva cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/unifamiliar-el-carrion.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/2.jpg" alt="">
+                                    <img src="assets/img/proyectos/unifamiliar-el-carrion/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Villa in Cannes</div>
-                                            <div class="cbp-l-caption-desc">2014/04</div>
+                                            <div class="cbp-l-caption-title">Vivienda Unifamiliar en El Carrión</div>
+                                            <div class="cbp-l-caption-desc">Ingenio, Las Palmas</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <!-- Portfolio Item (image and description) -->
+                        <li class="cbp-item obra-nueva cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/unifamiliar-risco-prieto.html">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="assets/img/proyectos/unifamiliar-risco-prieto/1.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignCenter">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Ampliación vivienda Unifamiliar en Risco Prieto</div>
+                                            <div class="cbp-l-caption-desc">San Mateo, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -151,16 +169,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item architecture apartments cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Summer House<br>2012/02" href="assets/img/projects/3big.jpg">
+                        <li class="cbp-item obra-nueva cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/residencial-arguineguin.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/3.jpg" alt="">
+                                    <img src="assets/img/proyectos/residencial-arguineguin/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Summer House</div>
-                                            <div class="cbp-l-caption-desc">2012/02</div>
+                                            <div class="cbp-l-caption-title">Agrupación residencial en Arguineguín</div>
+                                            <div class="cbp-l-caption-desc">Mogán, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -168,15 +186,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item architecture cbp-l-grid-masonry-height2">
-                            <a class="cbp-caption cbp-lightbox" data-title="Vimeo Embed" href="http://vimeo.com/52149990">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/vivienda-escaleritas.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/4.jpg" alt="">
+                                    <img src="assets/img/proyectos/vivienda-escaleritas/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Vimeo Embed</div>                                                
+                                            <div class="cbp-l-caption-title">Reforma Vivienda en Escaleritas</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas de GC, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -184,16 +203,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item apartments cbp-l-grid-masonry-height2">
-                            <a class="cbp-caption cbp-lightbox" data-title="Villa in Vegas<br>2011/01" href="assets/img/projects/5big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/vivienda-carvajal.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/5.jpg" alt="">
+                                    <img src="assets/img/proyectos/vivienda-carvajal/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Villa in Vegas</div>
-                                            <div class="cbp-l-caption-desc">2011/01</div>
+                                            <div class="cbp-l-caption-title">Reforma Vivienda en Carvajal edif. La Marina</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas de GC, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -201,16 +220,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item architecture cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="House in Texas<br>2014/09" href="assets/img/projects/6big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/vivienda-montana-arucas.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/6.jpg" alt="">
+                                    <img src="assets/img/proyectos/vivienda-montana-arucas/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">House in Texas</div>
-                                            <div class="cbp-l-caption-desc">2014/09</div>
+                                            <div class="cbp-l-caption-title">Reforma Vivienda en Montaña de Arucas</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>
@@ -218,16 +237,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item houses cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Luxury Apartment<br>2014/04" href="assets/img/projects/7big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/vivienda-parroco-villar.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/7.jpg" alt="">
+                                    <img src="assets/img/proyectos/vivienda-parroco-villar/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Luxury Apartment</div>
-                                            <div class="cbp-l-caption-desc">2014/04</div>
+                                            <div class="cbp-l-caption-title">Reforma Vivienda en Párroco Villar Reina</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas GC</div>
                                         </div>
                                     </div>
                                 </div>
@@ -235,16 +254,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item apartments cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Luxury Villa<br>2012/02" href="assets/img/projects/8big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/clinica-veterinaria-albea.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/8.jpg" alt="">
+                                    <img src="assets/img/proyectos/clinica-veterinaria-albea/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Luxury Villa</div>
-                                            <div class="cbp-l-caption-desc">2012/02</div>
+                                            <div class="cbp-l-caption-title">Clínica Veterinaria Albea</div>
+                                            <div class="cbp-l-caption-desc">Las Torres, Las Palmas GC</div>
                                         </div>
                                     </div>
                                 </div>
@@ -252,16 +271,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item apartments cbp-l-grid-masonry-height2">
-                            <a class="cbp-caption cbp-lightbox" data-title="House in Town<br>2014/04" href="assets/img/projects/9big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/clinica-veterinaria-lomo-los-frailes.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/9.jpg" alt="">
+                                    <img src="assets/img/proyectos/clinica-veterinaria-lomo-los-frailes/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">House in Town</div>
-                                            <div class="cbp-l-caption-desc">2014/04</div>
+                                            <div class="cbp-l-caption-title">Clínica Veterinaria Lomo Los Frailes</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas GC</div>
                                         </div>
                                     </div>
                                 </div>
@@ -269,16 +288,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item houses architecture cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Apartment in Chicago<br>2014/05" href="assets/img/projects/10big.jpg">
+                        <li class="cbp-item reformas cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/oficina-otech.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/10.jpg" alt="">
+                                    <img src="assets/img/proyectos/oficina-otech/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Apartment in Chicago</div>
-                                            <div class="cbp-l-caption-desc">2014/05</div>
+                                            <div class="cbp-l-caption-title">Reforma oficina comercial Otech</div>
+                                            <div class="cbp-l-caption-desc">Las Palmas GC</div>
                                         </div>
                                     </div>
                                 </div>
@@ -286,16 +305,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item houses architecture cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Luxury House<br>2012/01" href="assets/img/projects/11big.jpg">
+                        <li class="cbp-item otros cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/circuito-seguridad-vial.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/11.jpg" alt="">
+                                    <img src="assets/img/proyectos/circuito-seguridad-vial/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Luxury House</div>
-                                            <div class="cbp-l-caption-desc">2012/01</div>
+                                            <div class="cbp-l-caption-title">Circuito de Seguridad Vial Infantil</div>
+                                            <div class="cbp-l-caption-desc">Adeje, SC Tenerife</div>
                                         </div>
                                     </div>
                                 </div>
@@ -303,16 +322,16 @@
                         </li>
 
                         <!-- Portfolio Item (image and description) -->
-                        <li class="cbp-item houses architecture cbp-l-grid-masonry-height1">
-                            <a class="cbp-caption cbp-lightbox" data-title="Villa in Town<br>2010/01" href="assets/img/projects/12big.jpg">
+                        <li class="cbp-item otros cbp-l-grid-masonry-height1">
+                            <a class="cbp-caption cbp-singlePage" href="proyectos/ceip-cardones.html">
                                 <div class="cbp-caption-defaultWrap">
-                                    <img src="assets/img/projects/12.jpg" alt="">
+                                    <img src="assets/img/proyectos/ceip-cardones/1.jpg" alt="">
                                 </div>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignCenter">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Villa in Town</div>
-                                            <div class="cbp-l-caption-desc">2010/01</div>
+                                            <div class="cbp-l-caption-title">CEIP Cardones</div>
+                                            <div class="cbp-l-caption-desc">Arucas, Las Palmas</div>
                                         </div>
                                     </div>
                                 </div>

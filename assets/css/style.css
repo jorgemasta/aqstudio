@@ -575,36 +575,10 @@ a:focus {
 /* ----------------------------------------------------
 	HEADER PAGES PARALLAX BACKGROUND
 ------------------------------------------------------- */
-#about_bg {
-  background: url("../img/header_bg/image1.jpg") 50% 0 no-repeat fixed;
+#header_bg {
+  background: url("../img/background.jpg") 50% 0 no-repeat fixed;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-size: cover; }
-
-#service_bg {
-  background: url("../img/header_bg/image2.jpg") 50% 0 no-repeat fixed;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-size: cover; }
-
-#projects_bg {
-  background: url("../img/header_bg/image3.jpg") 50% 0 no-repeat fixed;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-size: cover; }
-
-#blog_bg {
-  color: #fff;
-  background: url("../img/header_bg/image4.jpg") 50% 0 no-repeat fixed;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-size: cover; }
-
-#blog2_bg {
-  color: #fff;
-  background: url("../img/header_bg/image5.jpg") 50% 0 no-repeat fixed;
-  padding-top: 80px;
-  padding-bottom: 80px;
   background-size: cover; }
 
 /* ----------------------------------------------------
@@ -761,6 +735,18 @@ body.maintenance {
     body.maintenance .main-title h1 {
       font-size: 70px; } }
 
+i.contact-icon {
+  display: inline-block;
+  font-size: 26px;
+  color: #d0ad55;
+  margin-top: 5px; }
+
+#contactform a {
+  color: #4c4c4c; }
+  #contactform a:hover, #contactform a:focus {
+    text-decoration: none;
+    color: #d0ad55; }
+
 /* ----------------------------------------------------
 	CONTACT STYLES
 ------------------------------------------------------- */
@@ -880,6 +866,9 @@ acronym {
 /* ----------------------------------------------------
 	ABOUT STYLES
 ------------------------------------------------------- */
+body.estudio p {
+  padding-bottom: 8px; }
+
 .our-team {
   background-color: #f2f2f2; }
 
@@ -978,6 +967,20 @@ acronym {
 /* ----------------------------------------------------
 	6) PROJECTS STYLES
 ------------------------------------------------------- */
+body.proyectos #filters-container .cbp-filter-counter {
+  display: none; }
+
+body.proyectos #grid-container .cbp-l-caption-body {
+  padding: 0 15px; }
+  body.proyectos #grid-container .cbp-l-caption-body .cbp-l-caption-title {
+    font-size: 14px;
+    padding-bottom: 6px; }
+
+.cbp-popup-singlePage img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px; }
+
 /* Index Projects Styles */
 .projects .col-md-4 {
   padding-right: 0;
@@ -1143,6 +1146,17 @@ acronym {
 /* ----------------------------------------------------
 	SERVICES STYLES
 ------------------------------------------------------- */
+.service-box ul {
+  list-style-type: none;
+  padding: 12px 20px; }
+  .service-box ul li {
+    text-align: start;
+    padding-bottom: 12px; }
+
+.service-box.service-box-center {
+  border-left: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE; }
+
 #service_inner {
   color: #fff;
   background: url("../img/header_bg/service_bg.jpg") 50% 0 no-repeat fixed;
@@ -1210,8 +1224,7 @@ acronym {
 
 .service-box {
   padding-top: 50px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #DEDEDE; }
+  padding-bottom: 50px; }
 
 .service-box-l {
   border-left: 1px solid #DEDEDE; }

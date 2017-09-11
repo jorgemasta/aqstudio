@@ -2,6 +2,21 @@
 	SERVICES STYLES
 ------------------------------------------------------- */
 
+.service-box {
+	ul {
+		list-style-type: none;
+		padding: 12px 20px;
+		li {
+			text-align: start;
+			padding-bottom: 12px;
+		}
+	}
+	&.service-box-center {
+		border-left: 1px solid #DEDEDE;
+		border-right: 1px solid #DEDEDE;
+	}
+}
+
 #service_inner{
 	color: #fff;
 	background: url('../img/header_bg/service_bg.jpg') 50% 0 no-repeat fixed;
@@ -70,7 +85,7 @@
 .service-box{
 	padding-top: 50px;
 	padding-bottom: 50px;
-	border-bottom: 1px solid #DEDEDE;
+	//border-bottom: 1px solid #DEDEDE;
 }
 .service-box-l{
 	border-left: 1px solid #DEDEDE;

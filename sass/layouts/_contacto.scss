@@ -1,3 +1,19 @@
+i.contact-icon{	
+	display: inline-block;
+	font-size: 26px;
+	color: #d0ad55;
+	margin-top: 5px;
+}
+
+#contactform {
+	a {
+		color: #4c4c4c;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: #d0ad55;
+		}
+	}
+}
 /* ----------------------------------------------------
 	CONTACT STYLES
 ------------------------------------------------------- */
