@@ -234,391 +234,170 @@
 		});
 	}); 
 
-	 /* ==============================================
-		CUBE PORTFOLIO
-	=============================================== */
+	/* = CUBE PORTFOLIO = */
 
-	var gridContainer = $('#grid-container'),
-		filtersContainer = $('#filters-container'),
-		gridBlog = $('#grid-blog'),
-		filtersBlog = $('#filters-blog'),
-		wrap, filtersCallback;
+    var gridContainer = $('#grid-container'),
+	filtersContainer = $('#filters-container'),
+	wrap, filtersCallback;
 
 
-	/*********************************
-	 init cubeportfolio
-	 *********************************/
-	gridContainer.cubeportfolio({
+/*********************************
+ init cubeportfolio
+ *********************************/
+gridContainer.cubeportfolio({
+	defaultFilter: '*',
+	animationType: 'quicksand',
+	gapHorizontal: 16,
+	gapVertical: 16,
+	gridAdjustment: 'responsive',
+	caption: 'zoom',
+	displayType: 'sequentially',
+	displayTypeSpeed: 100,
 
-		defaultFilter: '*',
+	// singlePageInline
+	singlePageInlineDelegate: '.cbp-singlePageInline',
+	singlePageInlinePosition: 'below',
+	singlePageInlineShowCounter: true,
+	singlePageInlineInFocus: true,
+	singlePageInlineCallback: function (url, element) {
 
-		animationType: 'flipOutDelay',
+		// to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
+		var t = this;
 
-		gapHorizontal: 30,
+		$.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'html',
+			timeout: 5000
+		})
+			.done(function (result) {
 
-		gapVertical: 30,
+				t.updateSinglePageInline(result);
+				/*$('#mygallery').justifiedGallery({
+					rowHeight : 300,
+					lastRow : 'nojustify',
+					margins : 3
+				});*/
+				console.log('doneee');
 
-		gridAdjustment: 'responsive',
-
-		caption: 'revealBottom',
-
-		displayType: 'lazyLoading',
-
-		displayTypeSpeed: 100,
-
-		// lightbox
-		lightboxDelegate: '.cbp-lightbox',
-		lightboxGallery: true,
-		lightboxTitleSrc: 'data-title',
-		lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} de {{total}}</div>',
-
-		// singlePage popup
-		singlePageDelegate: '.cbp-singlePage',
-		singlePageDeeplinking: true,
-		singlePageStickyNavigation: true,
-		singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} de {{total}}</div>',
-		singlePageCallback: function (url, element) {
-
-			// to update singlePage content use the following method: this.updateSinglePage(yourContent)
-			var t = this;
-
-			$.ajax({
-				url: url,
-				type: 'GET',
-				dataType: 'html',
-				timeout: 5000
 			})
-				.done(function (result) {
-					t.updateSinglePage(result);
-				})
-				.fail(function () {
-					t.updateSinglePage("Error! Please refresh the page!");
-				});
+			.fail(function () {
+				t.updateSinglePageInline("Error! Please refresh the page!");
+			});
+	}
+});
 
+
+/*********************************
+ add listener for filters
+ *********************************/
+if (filtersContainer.hasClass('cbp-l-filters-dropdown')) {
+
+	wrap = filtersContainer.find('.cbp-l-filters-dropdownWrap');
+
+	wrap.on({
+		'mouseover.cbp': function () {
+			wrap.addClass('cbp-l-filters-dropdownWrap-open');
 		},
-
-		// single page inline
-		singlePageInlineDelegate: '.cbp-singlePageInline',
-		singlePageInlinePosition: 'above',
-		singlePageInlineInFocus: true,
-		singlePageInlineCallback: function (url, element) {
-			// to update singlePage Inline content use the following method: this.updateSinglePageInline(yourContent)
+		'mouseleave.cbp': function () {
+			wrap.removeClass('cbp-l-filters-dropdownWrap-open');
 		}
 	});
 
+	filtersCallback = function (me) {
+		wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
 
-	/*********************************
-	 add listener for filters
-	 *********************************/
-	if (filtersContainer.hasClass('cbp-l-filters-dropdown')) {
+		wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
 
-		wrap = filtersContainer.find('.cbp-l-filters-dropdownWrap');
+		me.addClass('cbp-filter-item-active');
 
-		wrap.on({
-			'mouseover.cbp': function () {
-				wrap.addClass('cbp-l-filters-dropdownWrap-open');
-			},
-			'mouseleave.cbp': function () {
-				wrap.removeClass('cbp-l-filters-dropdownWrap-open');
-			}
-		});
+		wrap.trigger('mouseleave.cbp');
+	};
 
-		filtersCallback = function (me) {
-			wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
+} else {
+	filtersCallback = function (me) {
+		me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
+	};
+}
 
-			wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
+filtersContainer.on('click.cbp', '.cbp-filter-item', function () {
 
-			me.addClass('cbp-filter-item-active');
+	var me = $(this);
 
-			wrap.trigger('mouseleave.cbp');
-		};
-
-	} else {
-		filtersCallback = function (me) {
-			me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
-		};
+	if (me.hasClass('cbp-filter-item-active')) {
+		return;
 	}
 
-	filtersContainer.on('click.cbp', '.cbp-filter-item', function () {
-
-		var me = $(this);
-
-		if (me.hasClass('cbp-filter-item-active')) {
-			return;
-		}
-
-		// get cubeportfolio data and check if is still animating (reposition) the items.
-		if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
-			filtersCallback.call(null, me);
-		}
-
-		// filter the items
-		gridContainer.cubeportfolio('filter', me.data('filter'), function () {
-		});
-
-	});
-
-
-	/*********************************
-	 activate counter for filters
-	 *********************************/
-	gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'), function () {
-		// read from url and change filter active
-		var match = /#cbpf=(.*?)([#|?&]|$)/gi.exec(location.href),
-			item;
-		if (match !== null) {
-			item = filtersContainer.find('.cbp-filter-item').filter('[data-filter="' + match[1] + '"]');
-			if (item.length) {
-				filtersCallback.call(null, item);
-			}
-		}
-	});
-
-
-	/*********************************
-	 add listener for load more
-	 *********************************/
-	$('.cbp-l-loadMore-button-link').on('click.cbp', function (e) {
-
-		e.preventDefault();
-
-		var clicks, me = $(this),
-			oMsg;
-
-		if (me.hasClass('cbp-l-loadMore-button-stop')) {
-			return;
-		}
-
-		// get the number of times the loadMore link has been clicked
-		clicks = $.data(this, 'numberOfClicks');
-		clicks = (clicks) ? ++clicks : 1;
-		$.data(this, 'numberOfClicks', clicks);
-
-		// set loading status
-		oMsg = me.text();
-		me.text('LOADING...');
-
-		// perform ajax request
-		$.ajax({
-			url: me.attr('href'),
-			type: 'GET',
-			dataType: 'HTML'
-		}).done(function (result) {
-			var items, itemsNext;
-
-			// find current container
-			items = $(result).filter(function () {
-				return $(this).is('div' + '.cbp-loadMore-block' + clicks);
-			});
-
-			gridContainer.cubeportfolio('appendItems', items.html(),
-				function () {
-					// put the original message back
-					me.text(oMsg);
-
-					// check if we have more works
-					itemsNext = $(result).filter(function () {
-						return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
-					});
-
-					if (itemsNext.length === 0) {
-						me.text('NO MORE WORKS');
-						me.addClass('cbp-l-loadMore-button-stop');
-					}
-
-				});
-
-		}).fail(function () {
-			// error
-		});
-
-	});
-
-	/*Blog*/
-	gridBlog.cubeportfolio({
-
-		defaultFilter: '*',
-
-		animationType: 'flipOutDelay', 
-
-		gapVertical: 30,
-
-		gridAdjustment: 'responsive',
-
-		caption: 'revealBottom',
-
-		displayType: 'lazyLoading',
-
-		displayTypeSpeed: 100,
-
-		// lightbox
-		lightboxDelegate: '.cbp-lightbox',
-		lightboxGallery: true,
-		lightboxTitleSrc: 'data-title',
-		lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
-
-		// singlePage popup
-		singlePageDelegate: '.cbp-singlePage',
-		singlePageDeeplinking: true,
-		singlePageStickyNavigation: true,
-		singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} of {{total}}</div>',
-		singlePageCallback: function (url, element) {
-
-			// to update singlePage content use the following method: this.updateSinglePage(yourContent)
-			var t = this;
-
-			$.ajax({
-				url: url,
-				type: 'GET',
-				dataType: 'html',
-				timeout: 5000
-			})
-				.done(function (result) {
-					t.updateSinglePage(result);
-				})
-				.fail(function () {
-					t.updateSinglePage("Error! Please refresh the page!");
-				});
-
-		},
-
-		// single page inline
-		singlePageInlineDelegate: '.cbp-singlePageInline',
-		singlePageInlinePosition: 'above',
-		singlePageInlineInFocus: true,
-		singlePageInlineCallback: function (url, element) {
-			// to update singlePage Inline content use the following method: this.updateSinglePageInline(yourContent)
-		}
-	});
-
-
-	/*********************************
-	 add listener for filters
-	 *********************************/
-	if (filtersBlog.hasClass('cbp-l-filters-dropdown')) {
-
-		wrap = filtersContainer.find('.cbp-l-filters-dropdownWrap');
-
-		wrap.on({
-			'mouseover.cbp': function () {
-				wrap.addClass('cbp-l-filters-dropdownWrap-open');
-			},
-			'mouseleave.cbp': function () {
-				wrap.removeClass('cbp-l-filters-dropdownWrap-open');
-			}
-		});
-
-		filtersCallback = function (me) {
-			wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
-
-			wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
-
-			me.addClass('cbp-filter-item-active');
-
-			wrap.trigger('mouseleave.cbp');
-		};
-
-	} else {
-		filtersCallback = function (me) {
-			me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
-		};
+	// get cubeportfolio data and check if is still animating (reposition) the items.
+	if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
+		filtersCallback.call(null, me);
 	}
 
-	filtersBlog.on('click.cbp', '.cbp-filter-item', function () {
+	// filter the items
+	gridContainer.cubeportfolio('filter', me.data('filter'), function () {
+	});
 
-		var me = $(this);
+});
 
-		if (me.hasClass('cbp-filter-item-active')) {
-			return;
-		}
 
-		// get cubeportfolio data and check if is still animating (reposition) the items.
-		if (!$.data(gridBlog[0], 'cubeportfolio').isAnimating) {
-			filtersCallback.call(null, me);
-		}
+/*********************************
+ add listener for load more
+ *********************************/
+$('.cbp-l-loadMore-button-link').on('click.cbp', function (e) {
 
-		// filter the items
-		gridBlog.cubeportfolio('filter', me.data('filter'), function () {
+	e.preventDefault();
+
+	var clicks, me = $(this),
+		oMsg;
+
+	if (me.hasClass('cbp-l-loadMore-button-stop')) {
+		return;
+	}
+
+	// get the number of times the loadMore link has been clicked
+	clicks = $.data(this, 'numberOfClicks');
+	clicks = (clicks) ? ++clicks : 1;
+	$.data(this, 'numberOfClicks', clicks);
+
+	// set loading status
+	oMsg = me.text();
+	me.text('LOADING...');
+
+	// perform ajax request
+	$.ajax({
+		url: me.attr('href'),
+		type: 'GET',
+		dataType: 'HTML'
+	}).done(function (result) {
+		var items, itemsNext;
+
+		// find current container
+		items = $(result).filter(function () {
+			return $(this).is('div' + '.cbp-loadMore-block' + clicks);
 		});
 
-	});
+		gridContainer.cubeportfolio('appendItems', items.html(),
+			function () {
+				// put the original message back
+				me.text(oMsg);
 
-
-	/*********************************
-	 activate counter for filters
-	 *********************************/
-	gridBlog.cubeportfolio('showCounter', filtersBlog.find('.cbp-filter-item'), function () {
-		// read from url and change filter active
-		var match = /#cbpf=(.*?)([#|?&]|$)/gi.exec(location.href),
-			item;
-		if (match !== null) {
-			item = filtersBlog.find('.cbp-filter-item').filter('[data-filter="' + match[1] + '"]');
-			if (item.length) {
-				filtersCallback.call(null, item);
-			}
-		}
-	});
-
-
-	/*********************************
-	 add listener for load more
-	 *********************************/
-	$('.cbp-l-loadMore-button-link').on('click.cbp', function (e) {
-
-		e.preventDefault();
-
-		var clicks, me = $(this),
-			oMsg;
-
-		if (me.hasClass('cbp-l-loadMore-button-stop')) {
-			return;
-		}
-
-		// get the number of times the loadMore link has been clicked
-		clicks = $.data(this, 'numberOfClicks');
-		clicks = (clicks) ? ++clicks : 1;
-		$.data(this, 'numberOfClicks', clicks);
-
-		// set loading status
-		oMsg = me.text();
-		me.text('LOADING...');
-
-		// perform ajax request
-		$.ajax({
-			url: me.attr('href'),
-			type: 'GET',
-			dataType: 'HTML'
-		}).done(function (result) {
-			var items, itemsNext;
-
-			// find current container
-			items = $(result).filter(function () {
-				return $(this).is('div' + '.cbp-loadMore-block' + clicks);
-			});
-
-			gridBlog.cubeportfolio('appendItems', items.html(),
-				function () {
-					// put the original message back
-					me.text(oMsg);
-
-					// check if we have more works
-					itemsNext = $(result).filter(function () {
-						return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
-					});
-
-					if (itemsNext.length === 0) {
-						me.text('NO MORE WORKS');
-						me.addClass('cbp-l-loadMore-button-stop');
-					}
-
+				// check if we have more works
+				itemsNext = $(result).filter(function () {
+					return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
 				});
 
-		}).fail(function () {
-			// error
-		});
+				if (itemsNext.length === 0) {
+					me.text('NO MORE WORKS');
+					me.addClass('cbp-l-loadMore-button-stop');
+				}
 
+			});
+
+	}).fail(function () {
+		// error
 	});
 
+});
 	/* ==============================================
 		GOOGLE MAPS
 	=============================================== */
@@ -661,7 +440,7 @@
 		});
 		}
 
-		google.maps.event.addDomListener(window, 'load', initialize);       
-
-
+		google.maps.event.addDomListener(window, 'load', initialize);    
+		
+		
 })(jQuery, window, document);
