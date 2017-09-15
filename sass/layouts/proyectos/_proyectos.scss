@@ -18,6 +18,9 @@ body.proyectos {
 			}
 		}
 	}
+	.entidades-container, .rehabilitacion-container {
+		display: none;
+	}
 }
 
 @import 'proyecto-individual';

@@ -161,6 +161,28 @@
 		  paginationSpeed : 400,
 		  singleItem:true                              
 		});
+
+
+
+		
+		
+
+		$('.cbp-filter-item').click(function() {
+			if ( $(this).hasClass( "entidades" ) ) {
+				$(".entidades-container").show();
+				$(".rehabilitacion-container").hide();
+				return;
+			} else if ( $(this).hasClass( "rehabilitacion" ) ) {
+				$(".entidades-container").hide();
+				$(".rehabilitacion-container").show();
+				return;
+			} else {
+				$(".entidades-container").hide();
+				$(".rehabilitacion-container").hide();
+			}
+		});
+
+
 	 
 	});
 	

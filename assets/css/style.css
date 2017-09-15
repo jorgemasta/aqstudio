@@ -976,6 +976,9 @@ body.proyectos #grid-container .cbp-l-caption-body {
     font-size: 14px;
     padding-bottom: 6px; }
 
+body.proyectos .entidades-container, body.proyectos .rehabilitacion-container {
+  display: none; }
+
 .cbp-popup-singlePageInline {
   /*min-height: 800px;
     #mygallery {
@@ -989,14 +992,14 @@ body.proyectos #grid-container .cbp-l-caption-body {
   .cbp-popup-singlePageInline .proyecto-galeria {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -8px;
-    padding-bottom: 8px; }
+    margin-right: -8px; }
     .cbp-popup-singlePageInline .proyecto-galeria img {
       flex-grow: 1;
       max-height: 300px;
       width: auto;
       object-fit: cover;
-      padding-right: 8px; }
+      padding-right: 8px;
+      padding-bottom: 8px; }
     .cbp-popup-singlePageInline .proyecto-galeria:last-child img {
       flex-grow: 0; }
 
