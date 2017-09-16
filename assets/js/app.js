@@ -1,8 +1,12 @@
+$(document).ready(function(){
+	
+
+});
 (function ($, window, document, undefined) {
     'use strict';
 	
 	jQuery(document).ready(function(){
-
+			   
 	/* ==============================================
 		REVOLUTION SLIDER
 	=============================================== */
@@ -175,6 +179,13 @@
 			} else if ( $(this).hasClass( "rehabilitacion" ) ) {
 				$(".entidades-container").hide();
 				$(".rehabilitacion-container").show();
+
+				$('.rehabilitacion-galeria').justifiedGallery({
+					rowHeight : 300,
+					lastRow : 'nojustify',
+					margins : 3
+				});
+
 				return;
 			} else {
 				$(".entidades-container").hide();
@@ -239,10 +250,11 @@
 			}
 		);
 	});
-
+	
 	/* ==============================================
-		SMOOTH SCROLLING
+	SMOOTH SCROLLING
 	=============================================== */
+	
 
 	$('body').scrollspy();
 
@@ -258,10 +270,10 @@
 
 	/* = CUBE PORTFOLIO = */
 
+
     var gridContainer = $('#grid-container'),
 	filtersContainer = $('#filters-container'),
 	wrap, filtersCallback;
-
 
 /*********************************
  init cubeportfolio
@@ -295,12 +307,17 @@ gridContainer.cubeportfolio({
 			.done(function (result) {
 
 				t.updateSinglePageInline(result);
-				/*$('#mygallery').justifiedGallery({
-					rowHeight : 300,
-					lastRow : 'nojustify',
-					margins : 3
-				});*/
-				console.log('doneee');
+				$('.proyecto-galeria').slick({
+					dots: false,
+					infinite: true,
+					speed: 300,
+					slidesToShow: 1,
+					centerMode: true,
+					variableWidth: true
+				});
+				$('.proyecto-galeria').slick('slickGoTo', 0);
+				//$(".slick-next.slick-arrow").click();
+				//console.log('doneee');
 
 			})
 			.fail(function () {

@@ -12,23 +12,40 @@
     #mygallery {
         height: 650px;
     }*/
-    .proyecto-galeria {
+}
+.proyecto-galeria {
+    .slick-slide {
+        &:not(.slick-current) {
+            opacity: .3;
+        }
+    }
+    img {
+        //flex-grow: 1;
+        height: 400px;
+        width: auto;
+    }
+    &.rehabilitacion {
         display: flex;
-        flex-wrap: wrap;
-        //justify-content: space-between;
+        flex-wrap: nowrap;
         img {
             flex-grow: 1;
-            max-height: 300px;
-            width: auto;
+            max-height: 500px !important;
             object-fit: cover;
-            padding-right: 8px;
-            padding-bottom: 8px;
         }
-        margin-right: -8px;
-        &:last-child {
-            img {
-                flex-grow: 0;
-            }
+    }
+    
+    .slick-arrow {
+        z-index: 1;
+        width: 79px;
+        height: 70px;
+        &:before {
+            font-size: 80px;
+        }
+        &.slick-next {
+            right: 75px;
+        }
+        &.slick-prev {
+            left: 75px;
         }
     }
 }

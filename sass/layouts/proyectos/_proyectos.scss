@@ -17,10 +17,27 @@ body.proyectos {
 				padding-bottom: 6px;
 			}
 		}
+		.cbp-item .cbp-caption img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 	.entidades-container, .rehabilitacion-container {
 		display: none;
 	}
+	.proyecto-galeria {
+        .slick-slide {
+            &:not(.slick-current) {
+                opacity: .3;
+            }
+        }
+        img {
+            //flex-grow: 1;
+            height: 400px;
+            width: auto;
+        }
+    }
 }
 
 @import 'proyecto-individual';
