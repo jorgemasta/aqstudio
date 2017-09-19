@@ -695,9 +695,9 @@ a:focus {
   width: 100%;
   height: auto; }
 
-body.maintenance {
+.maintenance {
   overflow: hidden; }
-  body.maintenance .main-title {
+  .maintenance .main-title {
     position: absolute;
     margin: 0;
     padding: 0 15px;
@@ -708,7 +708,7 @@ body.maintenance {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  body.maintenance .main-title h1 {
+  .maintenance .main-title h1 {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -718,7 +718,7 @@ body.maintenance {
     padding: 0 15px;
     margin: 0;
     padding-bottom: 32px; }
-  body.maintenance .large-header {
+  .maintenance .large-header {
     position: relative;
     width: 100%;
     background: #fff;
@@ -726,13 +726,13 @@ body.maintenance {
     background-size: cover;
     background-position: center center;
     z-index: 1; }
-  body.maintenance a {
+  .maintenance a {
     color: #96814b; }
-  body.maintenance a:hover, body.maintenance a:active, body.maintenance a:focus {
+  .maintenance a:hover, .maintenance a:active, .maintenance a:focus {
     color: #5a4e2f;
     text-decoration: none; }
   @media (min-width: 768px) {
-    body.maintenance .main-title h1 {
+    .maintenance .main-title h1 {
       font-size: 70px; } }
 
 i.contact-icon {
