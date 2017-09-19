@@ -1,0 +1,131 @@
+/* ----------------------------------------------------
+	11) FOOTER STYLES
+------------------------------------------------------- */
+.footer-big{
+	color: #aaaaaa;
+	background-color: #2a2a2a;
+	font-size: 15px;
+}
+#footer{
+	background-color: #222;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.f-inner{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.f-inner:hover{
+	background-color: #d0ad55;
+	color: #fff;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.f-inner .col-sm-10{
+	padding-left: 0;
+}
+.f-logo{
+	margin-top: 70px;
+}
+.f-logo h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	line-height: 31px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #fff;	
+	-webkit-font-smoothing: antialiased;
+}
+.f-space{
+	padding: 8px 0;
+}
+.f-inner strong{
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff!important;	
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.f-inner address{
+	font-size: 0.8em;
+	line-height: 1.8em;
+	margin: 0;
+}
+.f-inner i{
+	color: #d0ad55;
+}
+.f-copyright{
+	margin-top: 6px;
+}
+.f-copyright span{
+	color: #aaaaaa;
+	font-size: 12px;
+}
+ul.footer-social{
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+.footer-social li{	
+	display: inline-block;
+}
+.f-cta{
+	width: 100%;
+	padding: 30px 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	background-color: #d0ad55;
+	font-size: 15px;
+	line-height: 25px;
+	color: #ffffff;
+	text-align: center;
+	display: block;	
+	position: relative;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.f-cta:hover{
+	background-color: #222;
+}
+.f-action a:focus{
+	color:#fff;
+}
+.cta-section h2{
+	margin-bottom: 30px;
+}
+.cta-section{
+	color: #fff;	
+	background: url('../img/header_bg/bg2.jpg') 50% 0 no-repeat fixed;
+	background-size: cover;
+}
+.cta-title-2 h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	line-height: 31px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #333;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+	margin: 0;	
+}
+.cta-title h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	line-height: 31px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+	margin: 0;	
+}

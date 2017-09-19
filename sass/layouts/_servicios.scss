@@ -1,0 +1,92 @@
+/* ----------------------------------------------------
+	SERVICES STYLES
+------------------------------------------------------- */
+
+.service-box {
+	ul {
+		list-style-type: none;
+		padding: 12px 20px;
+		li {
+			text-align: start;
+			padding-bottom: 12px;
+		}
+	}
+	&.service-box-center {
+		border-left: 1px solid #DEDEDE;
+		border-right: 1px solid #DEDEDE;
+	}
+}
+
+#service_inner{
+	color: #fff;
+	background: url('../img/header_bg/service_bg.jpg') 50% 0 no-repeat fixed;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-size: cover;					
+}	
+.price-table{
+	background-color: #f2f2f2;
+	border: 3px solid #f2f2f2;
+	border-radius: 0;
+	padding-bottom: 20px;
+}
+.price-table:hover{
+	border: 3px solid #d0ad55;
+}
+.price-table h3{
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	letter-spacing: 5px;
+}
+.price-table h1{
+	text-transform: uppercase;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	letter-spacing: 5px;
+}
+.price-table small{
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+.price-table p{
+	color: #999;
+	line-height: 40px;
+}
+/* Index Services Styles */
+.service-box p{
+	margin-left: 25px;
+	margin-right: 25px;
+}
+.service-box-none p{	
+	margin-left: 25px;
+	margin-right: 25px;
+} 
+.service-box-none h3{
+	padding: 10px 0;
+}
+.service-box-none i{
+	color: #d0ad55;
+}
+.service-box-none{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.service-box h3{
+	padding: 10px 0;
+}
+.service-box i{
+	color: #d0ad55;
+}
+.service-box{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	//border-bottom: 1px solid #DEDEDE;
+}
+.service-box-l{
+	border-left: 1px solid #DEDEDE;
+}

@@ -1,0 +1,61 @@
+/* ----------------------------------------------------
+	SITE WRAPPER STYLES
+------------------------------------------------------- */
+
+.site-wrapper{
+	padding-top: 80px;
+}
+.about-caption p{
+	margin: 0;
+}
+.about-caption h3{
+	font-family: 'Raleway', sans-serif;
+	color: #282828;
+	vertical-align: middle;
+	margin: 0;
+	margin-bottom: 13px;
+	line-height: 20px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.about-caption h5{
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 29px;
+	letter-spacing: 0px;
+	text-transform: none;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+.about-caption .col-sm-10{
+	padding-left: 10px;
+}
+.about-caption i{
+	color: #d0ad55;
+	font-size: 36px;
+}
+
+/* ----------------------------------------------------
+	RESPONSIVE STYLES
+------------------------------------------------------- */
+
+@media(max-width:767px){
+	#footer{text-align: center;}
+	ul.footer-social{float: none;margin-top: 20px;}
+	.f-inner{padding-top: 20px;padding-bottom: 20px;text-align: center;}
+	.f-inner .col-sm-10{padding-left: 15px;}
+	.f-logo h2{text-align: center;}
+	.f-logo {margin-top: 0;}
+	.price-table {margin-bottom: 20px;}
+	.about-caption{margin-bottom: 20px; text-align: center;}
+	.bg-color{text-align: center;}
+	.team-details{margin-bottom: 30px;}
+	.header-nav{padding-bottom: 20px;}
+	.nav-logo{float: right;}
+}
+@media(max-width:991px){
+	.nav-logo{float: right;}
+}
