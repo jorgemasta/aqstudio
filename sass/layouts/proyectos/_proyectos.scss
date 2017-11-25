@@ -17,13 +17,16 @@ body.proyectos {
 				padding-bottom: 6px;
 			}
 		}
-		.cbp-item .cbp-caption img {
+		.cbp-item.entidades {
+			width: 100% !important;
+		}
+		/* .cbp-item .cbp-caption img {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
-		}
+		} */
 	}
-	.entidades-container, .rehabilitacion-container {
+	.entidades-container, .rehabilitacion-container, .creacion-container {
 		display: none;
 	}
 	.proyecto-galeria {

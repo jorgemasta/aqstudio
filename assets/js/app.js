@@ -171,7 +171,7 @@ $(document).ready(function(){
 		
 		
 
-		$('.cbp-filter-item').click(function() {
+ 		$('.cbp-filter-item').click(function() {
 			if ( $(this).hasClass( "entidades" ) ) {
 				$(".entidades-container").show();
 				$(".rehabilitacion-container").hide();
@@ -179,13 +179,6 @@ $(document).ready(function(){
 			} else if ( $(this).hasClass( "rehabilitacion" ) ) {
 				$(".entidades-container").hide();
 				$(".rehabilitacion-container").show();
-
-				$('.rehabilitacion-galeria').justifiedGallery({
-					rowHeight : 300,
-					lastRow : 'nojustify',
-					margins : 3
-				});
-
 				return;
 			} else {
 				$(".entidades-container").hide();
@@ -203,7 +196,7 @@ $(document).ready(function(){
 		PAGE PRELOADER
 	=============================================== */
 
-		jQuery("#preloader").delay(900).fadeOut(500); 
+		jQuery("#preloader").delay(600).fadeOut(500); 
 		
 	});
 
@@ -274,7 +267,7 @@ $(document).ready(function(){
  init cubeportfolio
  *********************************/
 gridContainer.cubeportfolio({
-	defaultFilter: '*',
+	defaultFilter: '.reformas',
 	animationType: 'quicksand',
 	gapHorizontal: 16,
 	gapVertical: 16,
@@ -282,6 +275,21 @@ gridContainer.cubeportfolio({
 	caption: 'zoom',
 	displayType: 'sequentially',
 	displayTypeSpeed: 100,
+	layoutMode: 'grid',
+	mediaQueries: [
+	{
+		width: 1100,
+		cols: 3,
+	}, {
+		width: 767,
+		cols: 3,
+	}, {
+		width: 480,
+		cols: 1,
+		options: {
+			caption: '',
+		}
+	}],
 
 	// singlePageInline
 	singlePageInlineDelegate: '.cbp-singlePageInline',
@@ -292,7 +300,7 @@ gridContainer.cubeportfolio({
 
 		// to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
 		var t = this;
-
+		console.log('1');
 		$.ajax({
 			url: url,
 			type: 'GET',
@@ -300,8 +308,9 @@ gridContainer.cubeportfolio({
 			timeout: 5000
 		})
 			.done(function (result) {
-
 				t.updateSinglePageInline(result);
+			})
+			.complete(function() {
 				$('.proyecto-galeria').slick({
 					dots: false,
 					infinite: true,
@@ -310,10 +319,9 @@ gridContainer.cubeportfolio({
 					centerMode: true,
 					variableWidth: true
 				});
-				$('.proyecto-galeria').slick('slickGoTo', 0);
-				//$(".slick-next.slick-arrow").click();
-				//console.log('doneee');
-
+				$('.proyecto-galeria').imagesLoaded( function() {
+					$('.proyecto-galeria').slick('slickGoTo', 0);
+				});
 			})
 			.fail(function () {
 				t.updateSinglePageInline("Error! Please refresh the page!");

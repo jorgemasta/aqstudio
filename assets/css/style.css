@@ -970,18 +970,21 @@ body.estudio p {
 body.proyectos #filters-container .cbp-filter-counter {
   display: none; }
 
-body.proyectos #grid-container .cbp-l-caption-body {
-  padding: 0 15px; }
-  body.proyectos #grid-container .cbp-l-caption-body .cbp-l-caption-title {
-    font-size: 14px;
-    padding-bottom: 6px; }
+body.proyectos #grid-container {
+  /* .cbp-item .cbp-caption img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		} */ }
+  body.proyectos #grid-container .cbp-l-caption-body {
+    padding: 0 15px; }
+    body.proyectos #grid-container .cbp-l-caption-body .cbp-l-caption-title {
+      font-size: 14px;
+      padding-bottom: 6px; }
+  body.proyectos #grid-container .cbp-item.entidades {
+    width: 100% !important; }
 
-body.proyectos #grid-container .cbp-item .cbp-caption img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; }
-
-body.proyectos .entidades-container, body.proyectos .rehabilitacion-container {
+body.proyectos .entidades-container, body.proyectos .rehabilitacion-container, body.proyectos .creacion-container {
   display: none; }
 
 body.proyectos .proyecto-galeria .slick-slide:not(.slick-current) {
