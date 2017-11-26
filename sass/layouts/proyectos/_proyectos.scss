@@ -15,15 +15,19 @@ body.proyectos {
 			.cbp-l-caption-title {
 				font-size: 14px;
 				padding-bottom: 6px;
+				padding-top: 6px
 			}
 		}
-		.cbp-item .cbp-caption img {
+		.cbp-item.entidades {
+			width: 100% !important;
+		}
+		/* .cbp-item .cbp-caption img {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
-		}
+		} */
 	}
-	.entidades-container, .rehabilitacion-container {
+	.entidades-container, .rehabilitacion-container, .creacion-container {
 		display: none;
 	}
 	.proyecto-galeria {
@@ -33,11 +37,34 @@ body.proyectos {
             }
         }
         img {
-            //flex-grow: 1;
-            height: 400px;
-            width: auto;
+			//flex-grow: 1;
+			max-width: 95vw;
+            height: 35vh;
+			width: auto;
+			object-fit: contain;
+			@media(min-width: 375px) {
+				height: 40vh;				
+			}
+			@media(min-width: 768px) {
+				height: 65vh;	
+				max-width: 90vw;			
+			}
         }
-    }
+	}
+	.cbp-l-caption-desc {
+		padding-bottom: 6px
+	}
+	.cbp-l-inline-title {
+		padding-right: 36px;
+		@media(max-width: 767px) {
+			font-size: 22px;
+			line-height: 24px;			
+        }
+		@media(max-width: 374px) {
+			font-size: 18px;
+			line-height: 20px;			
+		}
+	}
 }
 
 @import 'proyecto-individual';
@@ -137,7 +164,7 @@ body.proyectos {
 	background-color: #f2f2f2;
 	border: none;
 	font: 400 12px/35px "Open Sans",sans-serif;
-	margin: 0;
+	//margin: 0;
 	margin-right: 10px;
 }
 .cbp-l-filters-list{
