@@ -175,14 +175,22 @@ $(document).ready(function(){
 			if ( $(this).hasClass( "entidades" ) ) {
 				$(".entidades-container").show();
 				$(".rehabilitacion-container").hide();
+				$(".creacion-container").hide();
 				return;
 			} else if ( $(this).hasClass( "rehabilitacion" ) ) {
 				$(".entidades-container").hide();
 				$(".rehabilitacion-container").show();
+				$(".creacion-container").hide();
+				return;
+			} else if ( $(this).hasClass( "creacion" ) ) {
+				$(".entidades-container").hide();
+				$(".rehabilitacion-container").hide();
+				$(".creacion-container").show();
 				return;
 			} else {
 				$(".entidades-container").hide();
 				$(".rehabilitacion-container").hide();
+				$(".creacion-container").hide();
 			}
 		});
 
@@ -312,7 +320,7 @@ gridContainer.cubeportfolio({
 			})
 			.complete(function() {
 				$('.proyecto-galeria').slick({
-					dots: false,
+					dots: true,
 					infinite: true,
 					speed: 300,
 					slidesToShow: 1,

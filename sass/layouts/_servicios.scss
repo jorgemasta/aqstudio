@@ -1,19 +1,25 @@
 /* ----------------------------------------------------
 	SERVICES STYLES
 ------------------------------------------------------- */
-
-.service-box {
-	ul {
-		list-style-type: none;
-		padding: 12px 20px;
-		li {
-			text-align: start;
-			padding-bottom: 12px;
+body.servicios {
+	.service-box {
+		ul {
+			//list-style-type: none;
+			padding: 12px 20px;
+			padding-left: 32px;
+			li {
+				text-align: start;
+				padding-bottom: 12px;
+				i {
+					color: rgb(90, 90, 90);
+					font-size: 13px
+				}
+			}
 		}
-	}
-	&.service-box-center {
-		border-left: 1px solid #DEDEDE;
-		border-right: 1px solid #DEDEDE;
+		&.service-box-center {
+			border-left: 1px solid #DEDEDE;
+			border-right: 1px solid #DEDEDE;
+		}
 	}
 }
 
