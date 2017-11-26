@@ -581,6 +581,18 @@ a:focus {
   padding-bottom: 200px;
   background-size: cover; }
 
+ul.navbar-nav li:nth-child(4) {
+  -ms-transform: rotate(-15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-15deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-15deg); }
+  ul.navbar-nav li:nth-child(4) a {
+    font-size: 13px !important; }
+    ul.navbar-nav li:nth-child(4) a:hover {
+      -webkit-animation: swing 1s;
+      animation: swing 1s; }
+
 /* ----------------------------------------------------
 	12)	OFF-CANVAS MENU
 ------------------------------------------------------- */
@@ -975,54 +987,54 @@ body.estudio .our-team img {
 /* ----------------------------------------------------
 	6) PROJECTS STYLES
 ------------------------------------------------------- */
-body.proyectos #filters-container .cbp-filter-counter {
+body.proyectos #filters-container .cbp-filter-counter, body.reinventar #filters-container .cbp-filter-counter {
   display: none; }
 
-body.proyectos #grid-container {
+body.proyectos #grid-container, body.reinventar #grid-container {
   /* .cbp-item .cbp-caption img {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
 		} */ }
-  body.proyectos #grid-container .cbp-l-caption-body {
+  body.proyectos #grid-container .cbp-l-caption-body, body.reinventar #grid-container .cbp-l-caption-body {
     padding: 0 15px; }
-    body.proyectos #grid-container .cbp-l-caption-body .cbp-l-caption-title {
+    body.proyectos #grid-container .cbp-l-caption-body .cbp-l-caption-title, body.reinventar #grid-container .cbp-l-caption-body .cbp-l-caption-title {
       font-size: 14px;
       padding-bottom: 6px;
       padding-top: 6px; }
-  body.proyectos #grid-container .cbp-item.entidades {
+  body.proyectos #grid-container .cbp-item.entidades, body.reinventar #grid-container .cbp-item.entidades {
     width: 100% !important; }
 
-body.proyectos .entidades-container, body.proyectos .rehabilitacion-container, body.proyectos .creacion-container {
+body.proyectos .entidades-container, body.proyectos .rehabilitacion-container, body.proyectos .creacion-container, body.reinventar .entidades-container, body.reinventar .rehabilitacion-container, body.reinventar .creacion-container {
   display: none; }
 
-body.proyectos .proyecto-galeria .slick-slide:not(.slick-current) {
+body.proyectos .proyecto-galeria .slick-slide:not(.slick-current), body.reinventar .proyecto-galeria .slick-slide:not(.slick-current) {
   opacity: .3; }
 
-body.proyectos .proyecto-galeria img {
+body.proyectos .proyecto-galeria img, body.reinventar .proyecto-galeria img {
   max-width: 95vw;
   height: 35vh;
   width: auto;
   object-fit: contain; }
   @media (min-width: 375px) {
-    body.proyectos .proyecto-galeria img {
+    body.proyectos .proyecto-galeria img, body.reinventar .proyecto-galeria img {
       height: 40vh; } }
   @media (min-width: 768px) {
-    body.proyectos .proyecto-galeria img {
+    body.proyectos .proyecto-galeria img, body.reinventar .proyecto-galeria img {
       height: 65vh;
       max-width: 90vw; } }
 
-body.proyectos .cbp-l-caption-desc {
+body.proyectos .cbp-l-caption-desc, body.reinventar .cbp-l-caption-desc {
   padding-bottom: 6px; }
 
-body.proyectos .cbp-l-inline-title {
+body.proyectos .cbp-l-inline-title, body.reinventar .cbp-l-inline-title {
   padding-right: 36px; }
   @media (max-width: 767px) {
-    body.proyectos .cbp-l-inline-title {
+    body.proyectos .cbp-l-inline-title, body.reinventar .cbp-l-inline-title {
       font-size: 22px;
       line-height: 24px; } }
   @media (max-width: 374px) {
-    body.proyectos .cbp-l-inline-title {
+    body.proyectos .cbp-l-inline-title, body.reinventar .cbp-l-inline-title {
       font-size: 18px;
       line-height: 20px; } }
 
@@ -1241,6 +1253,19 @@ body.proyectos .cbp-l-inline-title {
 
 .cbp-popup-singlePage .cbp-l-project-subtitle {
   margin: 0 auto 40px; }
+
+body.reinventar {
+  /*     li {
+        &.active a {
+            color: rgb(246, 246, 246) !important;
+        } 
+        a:hover {
+            color: rgb(238, 238, 238) !important;            
+        }
+    } */ }
+  body.reinventar .header-nav {
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 /* ----------------------------------------------------
 	SERVICES STYLES

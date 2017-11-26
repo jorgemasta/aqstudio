@@ -8,3 +8,18 @@
 	padding-bottom: 200px;
 	background-size: cover;					
 }
+
+ul.navbar-nav {
+	li:nth-child(4) {
+		-ms-transform: rotate(-15deg); /* IE 9 */
+		-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+		transform: rotate(-15deg);
+		a {
+			font-size: 13px !important;
+			&:hover {
+				-webkit-animation: swing 1s;
+				animation: swing 1s;
+			}
+		}
+	}
+}
