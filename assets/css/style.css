@@ -581,17 +581,18 @@ a:focus {
   padding-bottom: 200px;
   background-size: cover; }
 
-ul.navbar-nav li:nth-child(4) {
-  -ms-transform: rotate(-15deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-15deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(-15deg); }
-  ul.navbar-nav li:nth-child(4) a {
-    font-size: 13px !important; }
-    ul.navbar-nav li:nth-child(4) a:hover {
-      -webkit-animation: swing 1s;
-      animation: swing 1s; }
+@media (min-widht: 768px) {
+  ul.navbar-nav li:nth-child(4) {
+    -ms-transform: rotate(-15deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-15deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-15deg); }
+    ul.navbar-nav li:nth-child(4) a {
+      font-size: 13px !important; }
+      ul.navbar-nav li:nth-child(4) a:hover {
+        -webkit-animation: swing 1s;
+        animation: swing 1s; } }
 
 /* ----------------------------------------------------
 	12)	OFF-CANVAS MENU
@@ -983,6 +984,23 @@ body.estudio .our-team img {
 
 #our-clients {
   background-color: #f2f2f2; }
+
+body.home main .tp-caption {
+  white-space: initial; }
+
+body.home main h1, body.home main h2 {
+  padding: 12px !important;
+  font-size: 32px !important;
+  line-height: 34px !important;
+  max-width: 100vw !important;
+  font-family: 'Raleway', sans-serif;
+  color: #282836;
+  font-weight: 300;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) {
+    body.home main h1, body.home main h2 {
+      font-size: 52px !important;
+      line-height: 56px !important; } }
 
 /* ----------------------------------------------------
 	6) PROJECTS STYLES
