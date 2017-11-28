@@ -581,13 +581,13 @@ a:focus {
   padding-bottom: 200px;
   background-size: cover; }
 
-@media (min-widht: 768px) {
+@media (min-width: 768px) {
   ul.navbar-nav li:nth-child(4) {
-    -ms-transform: rotate(-15deg);
+    -ms-transform: rotate(-14deg);
     /* IE 9 */
-    -webkit-transform: rotate(-15deg);
+    -webkit-transform: rotate(-14deg);
     /* Chrome, Safari, Opera */
-    transform: rotate(-15deg); }
+    transform: rotate(-14deg); }
     ul.navbar-nav li:nth-child(4) a {
       font-size: 13px !important; }
       ul.navbar-nav li:nth-child(4) a:hover {

@@ -10,11 +10,11 @@
 }
 
 ul.navbar-nav {
-	@media (min-widht: 768px) {		
-		li:nth-child(4) {
-			-ms-transform: rotate(-15deg); /* IE 9 */
-			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
-			transform: rotate(-15deg);
+	li:nth-child(4) {
+		@media(min-width: 768px) {
+			-ms-transform: rotate(-14deg); /* IE 9 */
+			-webkit-transform: rotate(-14deg); /* Chrome, Safari, Opera */
+			transform: rotate(-14deg);
 			a {
 				font-size: 13px !important;
 				&:hover {
