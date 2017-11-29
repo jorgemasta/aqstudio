@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const image = require('gulp-image');
 const rename = require('gulp-rename');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
@@ -17,7 +18,13 @@ gulp.task('minify-css', () => {
         suffix: '.min'
       }))
       .pipe(gulp.dest('assets/css/'));
-  });
+});
+
+gulp.task('minify', function() {
+    return gulp.src('src/*.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('.'));
+});
 
 gulp.task('image', function () {
     gulp.src('./images/**/*')
@@ -28,4 +35,5 @@ gulp.task('image', function () {
 //Watch task
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss',['styles', 'minify-css']);
+    gulp.watch('src/**/*.html',['minify']);
 });
