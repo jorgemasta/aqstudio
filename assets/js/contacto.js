@@ -42,7 +42,7 @@ function initMap() {
     'use strict';
 	jQuery(document).ready(function(){
         $("#contactform").submit(function(e) {
-            e.preventDefault();
+            //e.preventDefault();
           
             $("#submit").fadeOut( "slow", function() {
                 $(".thank-you").fadeIn("slow");
