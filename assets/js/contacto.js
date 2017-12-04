@@ -40,6 +40,15 @@ function initMap() {
 
 (function ($, window, document, undefined) {
     'use strict';
+	jQuery(document).ready(function(){
+        $("#contactform").submit(function(e) {
+            e.preventDefault();
+          
+            $("#submit").fadeOut( "slow", function() {
+                $(".thank-you").fadeIn("slow");
+            });
+        });
+    });
 
     $(window).load(function(){
     /* ==============================================

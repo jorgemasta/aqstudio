@@ -748,17 +748,22 @@ a:focus {
     .maintenance .main-title h1 {
       font-size: 70px; } }
 
-i.contact-icon {
+body.contacto i.contact-icon {
   display: inline-block;
   font-size: 26px;
   color: #d0ad55;
   margin-top: 5px; }
 
-#contactform a {
+body.contacto #contactform a {
   color: #4c4c4c; }
-  #contactform a:hover, #contactform a:focus {
+  body.contacto #contactform a:hover, body.contacto #contactform a:focus {
     text-decoration: none;
     color: #d0ad55; }
+
+body.contacto .thank-you {
+  display: none;
+  padding-top: 26px;
+  position: absolute; }
 
 /* ----------------------------------------------------
 	CONTACT STYLES
