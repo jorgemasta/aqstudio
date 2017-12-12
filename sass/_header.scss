@@ -25,3 +25,11 @@ ul.navbar-nav {
 		}
 	}
 }
+
+a.navbar-brand {
+	img {
+		position: absolute;
+		top: 12px;
+		max-height: 46px;
+	}
+}

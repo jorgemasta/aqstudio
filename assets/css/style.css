@@ -594,6 +594,11 @@ a:focus {
         -webkit-animation: swing 1s;
         animation: swing 1s; } }
 
+a.navbar-brand img {
+  position: absolute;
+  top: 12px;
+  max-height: 46px; }
+
 /* ----------------------------------------------------
 	12)	OFF-CANVAS MENU
 ------------------------------------------------------- */
@@ -759,11 +764,6 @@ body.contacto #contactform a {
   body.contacto #contactform a:hover, body.contacto #contactform a:focus {
     text-decoration: none;
     color: #d0ad55; }
-
-body.contacto .thank-you {
-  display: none;
-  padding-top: 26px;
-  position: absolute; }
 
 /* ----------------------------------------------------
 	CONTACT STYLES
