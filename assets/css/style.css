@@ -608,11 +608,9 @@ a:focus {
     -webkit-transform: rotate(-14deg);
     /* Chrome, Safari, Opera */
     transform: rotate(-14deg); }
-    ul.navbar-nav li:nth-child(4) a {
-      font-size: 13px !important; }
-      ul.navbar-nav li:nth-child(4) a:hover {
-        -webkit-animation: swing 1s;
-        animation: swing 1s; } }
+    ul.navbar-nav li:nth-child(4) a:hover {
+      -webkit-animation: swing 1s;
+      animation: swing 1s; } }
 
 a.navbar-brand img {
   position: absolute;
