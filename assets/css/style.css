@@ -1309,6 +1309,7 @@ body.proyectos .cbp-l-inline-title, body.reinventar .cbp-l-inline-title {
 
 body.reinventar {
   position: relative;
+  overflow-x: hidden;
   /*     li {
         &.active a {
             color: rgb(246, 246, 246) !important;

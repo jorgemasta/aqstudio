@@ -42,7 +42,7 @@
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
-        largeHeader.style.height = height+'px';
+        //largeHeader.style.height = height+'px';
         canvas.width = width;
         canvas.height = height;
     }
