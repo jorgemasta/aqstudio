@@ -1,8 +1,23 @@
 body.reinventar {
+    position: relative;
     .header-nav {
         //background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    canvas {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 70px;
+    }
+    .cbp-caption-activeWrap {
+        background-color: rgba(208,173,85,0.9);
+        div.cbp-l-caption-desc {
+            color: #FFF
+        }
+    }
+    .slick-slide:not(.slick-current) {
+        opacity: 0.1 !important;
     }
 /*     li {
         &.active a {

@@ -297,7 +297,7 @@ html {
   min-height: 100%; }
 
 body {
-  height: 100%;
+  min-height: 100%;
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -1308,6 +1308,7 @@ body.proyectos .cbp-l-inline-title, body.reinventar .cbp-l-inline-title {
   margin: 0 auto 40px; }
 
 body.reinventar {
+  position: relative;
   /*     li {
         &.active a {
             color: rgb(246, 246, 246) !important;
@@ -1319,6 +1320,16 @@ body.reinventar {
   body.reinventar .header-nav {
     background-repeat: no-repeat;
     background-size: cover; }
+  body.reinventar canvas {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 70px; }
+  body.reinventar .cbp-caption-activeWrap {
+    background-color: rgba(208, 173, 85, 0.9); }
+    body.reinventar .cbp-caption-activeWrap div.cbp-l-caption-desc {
+      color: #FFF; }
+  body.reinventar .slick-slide:not(.slick-current) {
+    opacity: 0.1 !important; }
 
 /* ----------------------------------------------------
 	SERVICES STYLES
