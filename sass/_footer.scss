@@ -36,7 +36,7 @@
 	line-height: 31px;
 	font-weight: 300;
 	letter-spacing: 3px;
-	color: #fff;	
+	color: #fff;
 	-webkit-font-smoothing: antialiased;
 }
 .f-space{
@@ -44,7 +44,7 @@
 }
 .f-inner strong{
 	font-family: 'Raleway', sans-serif;
-	color: #ffffff!important;	
+	color: #ffffff!important;
 	font-weight: 400;
 	font-size: 14px;
 	letter-spacing: 1px;
@@ -65,12 +65,22 @@
 	color: #aaaaaa;
 	font-size: 12px;
 }
+.f-social {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
 ul.footer-social{
 	float: right;
 	padding: 0;
 	margin: 0;
 }
-.footer-social li{	
+.footer-social li{
 	display: inline-block;
 }
 .f-cta{
@@ -83,7 +93,7 @@ ul.footer-social{
 	line-height: 25px;
 	color: #ffffff;
 	text-align: center;
-	display: block;	
+	display: block;
 	position: relative;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
@@ -101,7 +111,7 @@ ul.footer-social{
 	margin-bottom: 30px;
 }
 .cta-section{
-	color: #fff;	
+	color: #fff;
 	background: url('../img/header_bg/bg2.jpg') 50% 0 no-repeat fixed;
 	background-size: cover;
 }
@@ -115,7 +125,7 @@ ul.footer-social{
 	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
 .cta-title h2{
 	font-family: 'Raleway', sans-serif;
@@ -127,5 +137,5 @@ ul.footer-social{
 	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }

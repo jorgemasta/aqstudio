@@ -1488,6 +1488,15 @@ body.servicios .service-box.service-box-center {
   color: #aaaaaa;
   font-size: 12px; }
 
+.f-social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .f-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
 ul.footer-social {
   float: right;
   padding: 0;
